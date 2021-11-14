@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main ()
+ {
+ int cos[12] = {10, 8, 5, 8, 7, 15, 20, 4, 9, 12, 8, 11};
+ float suma = 0, prom;
+ int i;
+ int cosMayor =0, indexCosMayor = 0;
+ while (i<12){
+ suma += cos[i];
+ i++;
+ }
+ prom = suma/12;
+ printf("el promedio de toneladas es: %f\n", prom);
+ for (i=0;i <=11;i++){
+   if (prom < cos [i])
+      printf ("En el mes %i hubo más producción que en la media y fueron %i toneladas.\n",i+1,cos [i]);
+    if (cosMayor < cos [i]){
+      cosMayor = cos [i];
+      indexCosMayor = i;
+   }
+ }
+ printf ("el mes de mayor producción fue el %i y se produjeron %i toneladas\n", indexCosMayor, cosMayor);
+ }
