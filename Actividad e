@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    int numeros[10], *nv;
+    float suma=0, prom;
+    for (int i=0;i<10;i++){
+        printf("Ingrese un numero: ");
+        scanf("%i", &numeros[i]);
+    }
+    nv = numeros;
+    for (int i=0;i<10;i++){
+        suma += *nv;
+        i++; 
+    }
+    prom = suma/10;
+    printf("La sumatoria es: %f", suma);
+    printf("El promeio es: %f", prom); 
+}
